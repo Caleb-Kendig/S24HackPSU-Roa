@@ -26,6 +26,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Show node path (debug)
+        run: |
+          which node
+          node -v
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2.1.1
         env:
@@ -36,3 +41,4 @@ jobs:
             -Dsonar.organization=caleb-kendig
             -Dsonar.projectKey=Caleb-Kendig_S24HackPSU-Roa
             -Dsonar.sources=.
+            -Dsonar.nodejs.executable=/opt/hostedtoolcache/node/20*/x64/bin/node
