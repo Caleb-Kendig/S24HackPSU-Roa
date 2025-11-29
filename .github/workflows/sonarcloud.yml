@@ -10,22 +10,21 @@ on:
 
 jobs:
   sonarcloud:
-    name: SonarCloud
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@d46d5b5d92ba17cc540b4cc31907a5e5bf3b9ba1
+        uses: SonarSource/sonarcloud-github-action@39bab52a9d9cbc8bc9124374f4ccdc25df49d5b3
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_QUBE_TEST }}
         with:
