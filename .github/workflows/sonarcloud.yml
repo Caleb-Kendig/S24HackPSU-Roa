@@ -17,17 +17,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Required for SonarCloud
+          fetch-depth: 0
 
-      - name: Setup Python (needed for python analysis)
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@e9418eaf78a0a5fb2a5fa31630bd6386f75626e1
+        uses: SonarSource/sonarcloud-github-action@d46d5b5d92ba17cc540b4cc31907a5e5bf3b9ba1
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_QUBE_TEST }}
         with:
           projectBaseDir: .
-
