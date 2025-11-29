@@ -27,7 +27,7 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1
         env:
-          SONAR_TOKEN: ${{ secrets.Sonar_Qube_Test }}
+          SONAR_TOKEN: ${{ secrets.SONAR_QUBE_TEST }}
         with:
           projectBaseDir: .
 
