@@ -25,7 +25,7 @@ jobs:
           python-version: '3.x'
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v1
+        uses: SonarSource/sonarcloud-github-action@e9418eaf78a0a5fb2a5fa31630bd6386f75626e1
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_QUBE_TEST }}
         with:
