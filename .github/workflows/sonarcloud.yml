@@ -23,9 +23,12 @@ jobs:
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2.1.1
-        with:
-          projectBaseDir: .
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_QUBE_TEST }}
-          SONAR_PROJECT_KEY: Caleb-Kendig_S24HackPSU-Roa
-          SONAR_ORGANIZATION: caleb-kendig
+        with:
+          projectBaseDir: .
+          args: >
+            -Dsonar.organization=caleb-kendig
+            -Dsonar.projectKey=Caleb-Kendig_S24HackPSU-Roa
+            -Dsonar.sources=.
+
