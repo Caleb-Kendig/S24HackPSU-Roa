@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
 
       - name: Show node path (debug)
         run: |
@@ -41,4 +41,3 @@ jobs:
             -Dsonar.organization=caleb-kendig
             -Dsonar.projectKey=Caleb-Kendig_S24HackPSU-Roa
             -Dsonar.sources=.
-            -Dsonar.nodejs.executable=/opt/hostedtoolcache/node/20*/x64/bin/node
