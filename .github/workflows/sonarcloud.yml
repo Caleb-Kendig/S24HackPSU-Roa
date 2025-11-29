@@ -36,4 +36,4 @@ jobs:
             -Dsonar.organization=caleb-kendig
             -Dsonar.projectKey=Caleb-Kendig_S24HackPSU-Roa
             -Dsonar.sources=.
-            -Dsonar.exclusions=**/*.js,**/*.ts
+            -Dsonar.exclusions=**/*.js,**/*.ts,**/*.jsx,**/*.tsx,**/*.vue,**/*.html
