@@ -28,5 +28,7 @@ jobs:
         
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_QUBE_TEST }}
+          SONAR_PROJECT_KEY: <Caleb-Kendig_S24HackPSU-Roa>
+          SONAR_ORGANIZATION: <Caleb-Kendig>
         with:
           projectBaseDir: .
